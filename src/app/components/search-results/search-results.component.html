@@ -1,0 +1,17 @@
+<div class="container" *ngIf="companySelected">
+    <h1> Resultados da Busca</h1>
+    <div class="accordion">
+        <div class="option">
+            <input type="checkbox" id="toggle1" class="toggle" />
+                <label class="title" for="toggle1">{{companySelected?.name}}</label>
+            <div class="content">
+                <p>{{companySelected?.description}} </p>
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-primary" (click)="openModal()">
+                        Ver mais
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+$color_1: #f0f0f0;
+$color_2: #038cfc;
+
+.header-component{
+    background:url('http://www.newdesignfile.com/postpic/2009/05/world-map-as-background_180475.jpg');
+    background-size: 100vw 46vh;
+    height: 46vh;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bottom{
+    height:2vh;
+    border-bottom: 2px solid $color_2;
+}
+.img-wrapper{
+   text-align:center;
+    background-color: $color_1;
+    border-radius: 25px;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+#searchfilter-icon{
+    filter: alpha(opacity=90);
+}
+@media only screen and (min-width:320px) and (orientation:portrait){
+    .img-wrapper{
+        width: 65vw;
+        height: 25vh;
+    }
+    #searchfilter-icon {
+        width: 15vw;
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+
+@media only screen and (min-width:320px) and (orientation:landscape){
+    .img-wrapper{
+        width: 65vw;
+        height: 40vh;
+    }
+    #searchfilter-icon {
+        width: 15vw;
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+@media only screen and (min-width:768px){
+    #searchfilter-icon {
+        width: 20vw;
+    }
+}
+
+@media only screen and (min-width:576px) and (orientation:landscape){
+    .img-wrapper{
+        width: 50vw;
+        height: 42vh;
+    }
+}
+
+
+@media only screen and (min-width:1024px) and (orientation:portrait){
+    .img-wrapper{
+        width:53vw;
+        height: 25vh;
+       
+    }
+}
+@media only screen and (min-width:1024px) and (orientation:landscape){
+    .img-wrapper{
+        width: 40vw;
+        height: 35vh;
+    }
+}

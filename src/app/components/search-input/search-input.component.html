@@ -1,0 +1,12 @@
+<div class="search-input">
+    <input class="form-control form-control-lg" type="text" placeholder="O que você procura?" [(ngModel)]="searchTerm">
+</div>
+<div class="showResults">
+    <ul>
+        <li *ngFor="let comp of companies | Companyfilter:searchTerm" id={{comp.id}}>
+            <a href="#" (click)="mountList(comp.id)">
+                {{comp.name}}
+            </a>
+        </li>
+    </ul>
+</div>

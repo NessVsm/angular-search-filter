@@ -1,0 +1,110 @@
+$color_1: #f0f0f0;
+$font-color: #7A7572;
+$color_3: #eee;
+$color_4: #666;
+$color_5: #fff;
+$color_6: #ddd;
+
+.search-result{
+    background-color: $color_1;
+    width:100vw;
+}
+
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0.25em;
+  width: 100%;
+  font: 16px 'Roboto';
+  background-color: $color_3;
+  color: $font-color;
+}
+h1 {
+  text-align: center;
+  margin: 1.5em 0 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px $color_4;
+}
+
+.accordion {
+  margin: 3em auto;
+  max-width: 30em;
+}
+
+.toggle {
+  display: none;
+}
+
+.option {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.title,
+.content {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all 0.2s;
+}
+
+.title {
+  background: $color_5;
+  padding: 1em;
+  display: block;
+  color: $font-color;
+  font-weight: bold;
+  border:1px solid $color_4;
+
+}
+.title:after, .title:before {
+  content: '';
+  position: absolute;
+  right: 1.25em;
+  top: 1.25em;
+  width: 2px;
+  height: 0.75em;
+  background-color: $font-color;
+  transition: all 0.2s;
+}
+.title:after {
+  transform: rotate(90deg);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  background-color:$color_5;
+  p {
+    margin: 0;
+    padding: 0.5em 1em 1em;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+}
+
+.toggle:checked {
+  & + .title,
+  & + .title + .content {
+    box-shadow: 3px 3px 6px $color_6, -3px 3px 6px $color_6;
+  }
+  & + .title + .content {
+    max-height: 500px;
+  }
+  & + .title:before {
+    transform: rotate(90deg) !important;
+  }
+}
+
+.button-wrapper button{
+    float: right;
+    margin-right: 2vw;
+    margin-bottom: 2vh;
+
+}

@@ -1,0 +1,48 @@
+$color_1:#fff;
+.form-control-lg{
+    width: 28vw;
+    margin-left: 3vw;
+    text-align: center;
+
+}
+.showResults ul
+{
+    background-color: $color_1;
+    text-align: left;
+    list-style: none;
+    line-height: 2em;
+    opacity: 1.0
+}
+
+@media only screen and (min-width:320px)and (orientation:portrait){
+    .form-control-lg{
+        width:59vw;
+        font-size: 1.0rem;
+        margin-top: 5vh;
+
+    }
+    
+}
+@media only screen and (min-width:320px)and (orientation:landscape){
+    .form-control-lg{
+        width:58vw;
+    }
+}
+
+@media only screen and (min-width:576px) and (orientation:landscape){
+    .form-control-lg{
+        width:45vw;
+    }
+}
+@media only screen and (min-width:768px) and (orientation:portrait){
+    .form-control-lg{
+        display: inline-block;
+        width:50vw;
+
+    }
+}
+@media only screen and (min-width:1024px) and (orientation:landscape){
+    .form-control-lg{
+        width:35vw;
+    }
+}
